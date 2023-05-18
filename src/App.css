@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --- variables --- */
+:root {
+    --bg-main: #8a00c0;
+    --bg-white: #f7f7f7;
+    --bg-orange: #ff7729;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ----- Navabar starts here----- */
+.navbar {
+    width: 100%;
+    height: 10vh;
+    padding: 0 5%;
+    background: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--bg-white);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar .brand-name {
+    font-size: 34px;
+    font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-items .links {
+    margin-right: 120px;
+    display: flex;
+    gap: 20px;
+
 }
+
+.nav-items .links .link {
+    text-decoration: none;
+    color: var(--bg-white);
+    font-size: 14px;
+}
+
+.navbar .nav-items .currentUserName {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar .nav-items .currentUserName .displayCurrentUserName {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar .nav-items .currentUserName img {
+    border-radius: 50%;
+    border: 3px solid var(--bg-white);
+}
+
+/* ----- Navabar ends here----- */
+
+/* ----- Create post starts here ----- */
+.form-container {
+    width: 100%;
+    height: 90vh;
+    background: var(--bg-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.create-post-form {
+    width: 60%;
+    background: var(--bg-orange);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+    color: var(--bg-white);
+    border-radius: 3px 50px;
+}
+
+.create-post-form .heading {
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+.create-post-form .post-input {
+    background: var(--bg-white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.post-btn {
+    padding: 10px 50px;
+    margin-top: 20px;
+    background: var(--bg-white);
+    color: var(--bg-orange);
+    border: 3px solid var(--bg-orange);
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.post-btn:hover {
+    background: var(--bg-orange);
+    color: var(--bg-white);
+    border: 3px solid var(--bg-white);
+}
+
+/* ----- Create post ends here ----- */
+
+/* ----- Post display on main */
+.post-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.post-display{
+    width: 40%;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc; */
+    /* border-bottom: 10px solid #fff; */
+    padding: 50px 50px;
+    background: var(--bg-white);
+}
+.post-title{
+    font-size: 27px;
+    font-weight: 500;
+}
+.post-body{
+    font-size: 14px;
+    /* font-weight: 100; */
+    margin-top: 10px;
+
+}
+.post-footer{
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+/* ----- Post display on main */
